@@ -1,28 +1,19 @@
-name = "interactive-stores"
-type = "webpack"
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
-compatibility_date = "2023-01-01"
+name = "stores-deals"
+compatibility_date = "2024-03-26"
+main = "./src/worker.js"
+compatibility_flags = [ "nodejs_compat" ] 
+
+# KV namespace configuration - this is used by both Pages and Workers
+[[kv_namespaces]]
+binding = "STORE_DATA"
+id = "2576d37f905440c08bd36e6fea0906a6"
+preview_id = "bbc906ddc078420fa2d090087df75c75"
+
+# D1 Database for admin and store data
+[[d1_databases]]
+binding = "STORES_DB"
+database_name = "stores-deals"
+database_id = "5461e622-6ca6-458f-8e12-fdc6094e1895"
 
 [site]
 bucket = "./dist"
-
-[env.production]
-name = "interactive-stores-prod"
-route = "https://your-domain.com/*"
-
-[env.staging]
-name = "interactive-stores-staging"
-route = "https://staging.your-domain.com/*"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "interactive_stores"
-database_id = ""
-
-[[kv_namespaces]]
-binding = "STORES_KV"
-id = ""
-preview_id = ""

@@ -1,0 +1,25 @@
+[install]
+# Use the exact versions in package.json
+exact = true 
+# Skip pre/post hooks during install
+no-hooks = false
+
+[install.cache]
+# Enable global cache sharing
+dir = ".bun"
+disable = false
+
+[test]
+# Default test coverage reporting
+coverage = true
+
+[build]
+# Optimize for speed
+minify = true
+
+# Enable JSX automatic runtime for React
+jsx = "automatic"
+
+# Optimize for React
+jsx-factory = "React.createElement"
+jsx-fragment = "React.Fragment"
