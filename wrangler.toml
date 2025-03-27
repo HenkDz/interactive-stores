@@ -1,0 +1,28 @@
+name = "interactive-stores"
+type = "webpack"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2023-01-01"
+
+[site]
+bucket = "./dist"
+
+[env.production]
+name = "interactive-stores-prod"
+route = "https://your-domain.com/*"
+
+[env.staging]
+name = "interactive-stores-staging"
+route = "https://staging.your-domain.com/*"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "interactive_stores"
+database_id = ""
+
+[[kv_namespaces]]
+binding = "STORES_KV"
+id = ""
+preview_id = ""
